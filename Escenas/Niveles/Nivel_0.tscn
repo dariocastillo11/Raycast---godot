@@ -1,0 +1,501 @@
+[gd_scene load_steps=170 format=2]
+
+[ext_resource path="res://Recursos/Portal/Apertura/Portal_Apertura_2.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Portal/Apertura/Portal_Apertura_1.png" type="Texture" id=2]
+[ext_resource path="res://Escenas/Tiles/TileSetCol.tres" type="TileSet" id=3]
+[ext_resource path="res://Escenas/Coleccionables/Bateria.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Escenas/Enemigos/Zombie.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Escenas/Player/Shoot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Escenas/Coleccionables/Engrane.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Escenas/Enemigos/Spit.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escenas/Player/Player.gd" type="Script" id=9]
+[ext_resource path="res://Escenas/Ppal/Ppal.gd" type="Script" id=10]
+[ext_resource path="res://Recursos/Comica BD Bold.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_35.png" type="Texture" id=12]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_26.png" type="Texture" id=13]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_28.png" type="Texture" id=14]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_36.png" type="Texture" id=15]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_27.png" type="Texture" id=16]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_34.png" type="Texture" id=17]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_32.png" type="Texture" id=18]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_29.png" type="Texture" id=19]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_31.png" type="Texture" id=20]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_24.png" type="Texture" id=21]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_25.png" type="Texture" id=22]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_33.png" type="Texture" id=23]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_30.png" type="Texture" id=24]
+[ext_resource path="res://Recursos/Player/Jump/Jump (10).png" type="Texture" id=25]
+[ext_resource path="res://Recursos/Player/Idle/Idle (6).png" type="Texture" id=26]
+[ext_resource path="res://Recursos/Player/Idle/Idle (10).png" type="Texture" id=27]
+[ext_resource path="res://Recursos/Player/Run/Run (1).png" type="Texture" id=28]
+[ext_resource path="res://Recursos/Player/Idle/Idle (8).png" type="Texture" id=29]
+[ext_resource path="res://Recursos/Player/Jump/Jump (8).png" type="Texture" id=30]
+[ext_resource path="res://Recursos/Player/Idle/Idle (7).png" type="Texture" id=31]
+[ext_resource path="res://Recursos/Player/Idle/Idle (4).png" type="Texture" id=32]
+[ext_resource path="res://Recursos/Varios/Fondo.png" type="Texture" id=33]
+[ext_resource path="res://Recursos/Player/Idle/Idle (9).png" type="Texture" id=34]
+[ext_resource path="res://Recursos/Player/Idle/Idle (1).png" type="Texture" id=35]
+[ext_resource path="res://Recursos/Player/Idle/Idle (5).png" type="Texture" id=36]
+[ext_resource path="res://Recursos/Player/Idle/Idle (2).png" type="Texture" id=37]
+[ext_resource path="res://Recursos/Player/Idle/Idle (3).png" type="Texture" id=38]
+[ext_resource path="res://Recursos/Player/Jump/Jump (9).png" type="Texture" id=39]
+[ext_resource path="res://Recursos/Player/Run/Run (2).png" type="Texture" id=40]
+[ext_resource path="res://Recursos/Player/Run/Run (8).png" type="Texture" id=41]
+[ext_resource path="res://Recursos/Player/Run/Run (5).png" type="Texture" id=42]
+[ext_resource path="res://Recursos/Player/Jump/Jump (3).png" type="Texture" id=43]
+[ext_resource path="res://Recursos/Player/Jump/Jump (5).png" type="Texture" id=44]
+[ext_resource path="res://Recursos/Player/Run/Run (6).png" type="Texture" id=45]
+[ext_resource path="res://Recursos/Player/Jump/Jump (7).png" type="Texture" id=46]
+[ext_resource path="res://Recursos/Player/Run/Run (4).png" type="Texture" id=47]
+[ext_resource path="res://Recursos/Player/Run/Run (7).png" type="Texture" id=48]
+[ext_resource path="res://Recursos/Player/Jump/Jump (2).png" type="Texture" id=49]
+[ext_resource path="res://Recursos/Player/Jump/Jump (1).png" type="Texture" id=50]
+[ext_resource path="res://Recursos/Player/Run/Run (3).png" type="Texture" id=51]
+[ext_resource path="res://Recursos/Player/Jump/Jump (4).png" type="Texture" id=52]
+[ext_resource path="res://Recursos/Player/Jump/Jump (6).png" type="Texture" id=53]
+[ext_resource path="res://Recursos/Portal/Apertura/Portal_Apertura_9.png" type="Texture" id=54]
+[ext_resource path="res://Recursos/Portal/Apertura/Portal_Apertura_5.png" type="Texture" id=55]
+[ext_resource path="res://Recursos/Portal/Apertura/Portal_Apertura_12.png" type="Texture" id=56]
+[ext_resource path="res://Recursos/Portal/Apertura/Portal_Apertura_3.png" type="Texture" id=57]
+[ext_resource path="res://Recursos/Portal/Apertura/Portal_Apertura_7.png" type="Texture" id=58]
+[ext_resource path="res://Recursos/Portal/Apertura/Portal_Apertura_10.png" type="Texture" id=59]
+[ext_resource path="res://Recursos/Portal/Apertura/Portal_Apertura_11.png" type="Texture" id=60]
+[ext_resource path="res://Recursos/Portal/Apertura/Portal_Apertura_8.png" type="Texture" id=61]
+[ext_resource path="res://Recursos/Portal/Apertura/Portal_Apertura_13.png" type="Texture" id=62]
+[ext_resource path="res://Recursos/Portal/Apertura/Portal_Apertura_6.png" type="Texture" id=63]
+[ext_resource path="res://Recursos/Portal/Apertura/Portal_Apertura_4.png" type="Texture" id=64]
+[ext_resource path="res://Escenas/Tiles/TileSetEnemigos.tres" type="TileSet" id=65]
+[ext_resource path="res://Escenas/Tiles/TileSetColeccionables.tres" type="TileSet" id=66]
+[ext_resource path="res://Escenas/Tiles/TileSetLava.tres" type="TileSet" id=67]
+[ext_resource path="res://Recursos/Player/Shoot/Shoot (4).png" type="Texture" id=68]
+[ext_resource path="res://Recursos/Player/Melee/Melee (8).png" type="Texture" id=69]
+[ext_resource path="res://Recursos/Player/Slide/Slide (7).png" type="Texture" id=70]
+[ext_resource path="res://Recursos/Player/Melee/Melee (4).png" type="Texture" id=71]
+[ext_resource path="res://Recursos/Player/Slide/Slide (8).png" type="Texture" id=72]
+[ext_resource path="res://Recursos/Player/Slide/Slide (10).png" type="Texture" id=73]
+[ext_resource path="res://Recursos/Player/Melee/Melee (7).png" type="Texture" id=74]
+[ext_resource path="res://Recursos/Player/Slide/Slide (1).png" type="Texture" id=75]
+[ext_resource path="res://Recursos/Player/Melee/Melee (6).png" type="Texture" id=76]
+[ext_resource path="res://Recursos/Player/Caida/Caida.png" type="Texture" id=77]
+[ext_resource path="res://Recursos/Player/Melee/Melee (3).png" type="Texture" id=78]
+[ext_resource path="res://Recursos/Player/Shoot/Shoot (3).png" type="Texture" id=79]
+[ext_resource path="res://Recursos/Player/Slide/Slide (9).png" type="Texture" id=80]
+[ext_resource path="res://Recursos/Player/Melee/Melee (5).png" type="Texture" id=81]
+[ext_resource path="res://Recursos/Player/Melee/Melee (1).png" type="Texture" id=82]
+[ext_resource path="res://Recursos/Player/Melee/Melee (2).png" type="Texture" id=83]
+[ext_resource path="res://Recursos/Player/Shoot/Shoot (1).png" type="Texture" id=84]
+[ext_resource path="res://Recursos/Player/Shoot/Shoot (2).png" type="Texture" id=85]
+[ext_resource path="res://Recursos/Player/Dead/Dead (4).png" type="Texture" id=86]
+[ext_resource path="res://Recursos/Player/Dead/Dead (7).png" type="Texture" id=87]
+[ext_resource path="res://Recursos/Player/Dead/Dead (1).png" type="Texture" id=88]
+[ext_resource path="res://Recursos/Player/JumpShoot/JumpShoot (5).png" type="Texture" id=89]
+[ext_resource path="res://Recursos/Player/Dead/Dead (2).png" type="Texture" id=90]
+[ext_resource path="res://Recursos/Player/Slide/Slide (2).png" type="Texture" id=91]
+[ext_resource path="res://Recursos/Player/JumpMelee/JumpMelee (2).png" type="Texture" id=92]
+[ext_resource path="res://Recursos/Player/RunShoot/RunShoot (5).png" type="Texture" id=93]
+[ext_resource path="res://Recursos/Player/RunShoot/RunShoot (6).png" type="Texture" id=94]
+[ext_resource path="res://Recursos/Player/RunShoot/RunShoot (7).png" type="Texture" id=95]
+[ext_resource path="res://Recursos/Player/Slide/Slide (3).png" type="Texture" id=96]
+[ext_resource path="res://Recursos/Player/Slide/Slide (4).png" type="Texture" id=97]
+[ext_resource path="res://Recursos/Player/JumpMelee/JumpMelee (4).png" type="Texture" id=98]
+[ext_resource path="res://Recursos/Player/JumpShoot/JumpShoot (3).png" type="Texture" id=99]
+[ext_resource path="res://Recursos/Player/JumpShoot/JumpShoot (1).png" type="Texture" id=100]
+[ext_resource path="res://Recursos/Player/RunShoot/RunShoot (1).png" type="Texture" id=101]
+[ext_resource path="res://Recursos/Player/Dead/Dead (8).png" type="Texture" id=102]
+[ext_resource path="res://Recursos/Player/RunShoot/RunShoot (8).png" type="Texture" id=103]
+[ext_resource path="res://Recursos/Player/RunShoot/RunShoot (2).png" type="Texture" id=104]
+[ext_resource path="res://Recursos/Player/Slide/Slide (6).png" type="Texture" id=105]
+[ext_resource path="res://Recursos/Player/Slide/Slide (5).png" type="Texture" id=106]
+[ext_resource path="res://Recursos/Player/RunShoot/RunShoot (3).png" type="Texture" id=107]
+[ext_resource path="res://Recursos/Player/JumpMelee/JumpMelee (1).png" type="Texture" id=108]
+[ext_resource path="res://Recursos/Player/JumpMelee/JumpMelee (6).png" type="Texture" id=109]
+[ext_resource path="res://Recursos/Player/JumpMelee/JumpMelee (3).png" type="Texture" id=110]
+[ext_resource path="res://Recursos/Player/JumpShoot/JumpShoot (4).png" type="Texture" id=111]
+[ext_resource path="res://Recursos/Player/RunShoot/RunShoot (4).png" type="Texture" id=112]
+[ext_resource path="res://Recursos/Player/JumpMelee/JumpMelee (7).png" type="Texture" id=113]
+[ext_resource path="res://Recursos/Player/JumpShoot/JumpShoot (2).png" type="Texture" id=114]
+[ext_resource path="res://Recursos/Player/Escalada/Escalada.png" type="Texture" id=115]
+[ext_resource path="res://Recursos/Player/JumpMelee/JumpMelee (8).png" type="Texture" id=116]
+[ext_resource path="res://Recursos/Player/RunShoot/RunShoot (9).png" type="Texture" id=117]
+[ext_resource path="res://Recursos/Player/JumpMelee/JumpMelee (5).png" type="Texture" id=118]
+[ext_resource path="res://Recursos/Portal/Idle/Portal_Idle_5.png" type="Texture" id=119]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_1.png" type="Texture" id=120]
+[ext_resource path="res://Recursos/Portal/Idle/Portal_Idle_2.png" type="Texture" id=121]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_12.png" type="Texture" id=122]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_15.png" type="Texture" id=123]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_5.png" type="Texture" id=124]
+[ext_resource path="res://Recursos/Portal/Idle/Portal_Idle_9.png" type="Texture" id=125]
+[ext_resource path="res://Recursos/Player/Dead/Dead (5).png" type="Texture" id=126]
+[ext_resource path="res://Recursos/Portal/Idle/Portal_Idle_13.png" type="Texture" id=127]
+[ext_resource path="res://Recursos/Portal/Idle/Portal_Idle_10.png" type="Texture" id=128]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_7.png" type="Texture" id=129]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_16.png" type="Texture" id=130]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_14.png" type="Texture" id=131]
+[ext_resource path="res://Recursos/Portal/Idle/Portal_Idle_6.png" type="Texture" id=132]
+[ext_resource path="res://Recursos/Portal/Idle/Portal_Idle_1.png" type="Texture" id=133]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_13.png" type="Texture" id=134]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_17.png" type="Texture" id=135]
+[ext_resource path="res://Recursos/Portal/Idle/Portal_Idle_3.png" type="Texture" id=136]
+[ext_resource path="res://Recursos/Player/Dead/Dead (9).png" type="Texture" id=137]
+[ext_resource path="res://Recursos/Player/Dead/Dead (10).png" type="Texture" id=138]
+[ext_resource path="res://Recursos/Portal/Idle/Portal_Idle_7.png" type="Texture" id=139]
+[ext_resource path="res://Recursos/Portal/Idle/Portal_Idle_8.png" type="Texture" id=140]
+[ext_resource path="res://Recursos/Portal/Idle/Portal_Idle_4.png" type="Texture" id=141]
+[ext_resource path="res://Recursos/Portal/Idle/Portal_Idle_12.png" type="Texture" id=142]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_2.png" type="Texture" id=143]
+[ext_resource path="res://Recursos/Player/Dead/Dead (3).png" type="Texture" id=144]
+[ext_resource path="res://Recursos/Portal/Idle/Portal_Idle_11.png" type="Texture" id=145]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_8.png" type="Texture" id=146]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_6.png" type="Texture" id=147]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_4.png" type="Texture" id=148]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_9.png" type="Texture" id=149]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_10.png" type="Texture" id=150]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_11.png" type="Texture" id=151]
+[ext_resource path="res://Recursos/Player/Dead/Dead (6).png" type="Texture" id=152]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_3.png" type="Texture" id=153]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_23.png" type="Texture" id=154]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_18.png" type="Texture" id=155]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_19.png" type="Texture" id=156]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_20.png" type="Texture" id=157]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_21.png" type="Texture" id=158]
+[ext_resource path="res://Recursos/Portal/Cierre/Portal_Cierre_22.png" type="Texture" id=159]
+[ext_resource path="res://Escenas/Enemigos/Esqueleto.tscn" type="PackedScene" id=160]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 133 ), ExtResource( 121 ), ExtResource( 136 ), ExtResource( 141 ), ExtResource( 119 ), ExtResource( 132 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 125 ), ExtResource( 128 ), ExtResource( 145 ), ExtResource( 142 ), ExtResource( 127 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 57 ), ExtResource( 64 ), ExtResource( 55 ), ExtResource( 63 ), ExtResource( 58 ), ExtResource( 61 ), ExtResource( 54 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 56 ), ExtResource( 62 ) ],
+"loop": false,
+"name": "Apertura",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 120 ), ExtResource( 143 ), ExtResource( 153 ), ExtResource( 148 ), ExtResource( 124 ), ExtResource( 147 ), ExtResource( 129 ), ExtResource( 146 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ), ExtResource( 122 ), ExtResource( 134 ), ExtResource( 131 ), ExtResource( 123 ), ExtResource( 130 ), ExtResource( 135 ), ExtResource( 155 ), ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 159 ), ExtResource( 154 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 19 ), ExtResource( 24 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 23 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 15 ) ],
+"loop": false,
+"name": "Cierre",
+"speed": 8.0
+} ]
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 100.0
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 35 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 32 ), ExtResource( 36 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 34 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 40 ), ExtResource( 51 ), ExtResource( 47 ), ExtResource( 42 ), ExtResource( 45 ), ExtResource( 48 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "Run",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 84 ), ExtResource( 85 ), ExtResource( 79 ), ExtResource( 68 ) ],
+"loop": false,
+"name": "Shoot",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 82 ), ExtResource( 83 ), ExtResource( 78 ), ExtResource( 71 ), ExtResource( 81 ), ExtResource( 76 ), ExtResource( 74 ), ExtResource( 69 ) ],
+"loop": false,
+"name": "Melee",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 88 ), ExtResource( 90 ), ExtResource( 144 ), ExtResource( 86 ), ExtResource( 126 ), ExtResource( 152 ), ExtResource( 87 ), ExtResource( 102 ), ExtResource( 137 ), ExtResource( 138 ) ],
+"loop": false,
+"name": "Dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 49 ), ExtResource( 43 ), ExtResource( 52 ), ExtResource( 44 ), ExtResource( 53 ), ExtResource( 46 ), ExtResource( 30 ), ExtResource( 39 ), ExtResource( 25 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 101 ), ExtResource( 104 ), ExtResource( 107 ), ExtResource( 112 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 103 ), ExtResource( 117 ) ],
+"loop": false,
+"name": "RunShoot",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 115 ) ],
+"loop": true,
+"name": "Escalada",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 49 ), ExtResource( 43 ), ExtResource( 52 ), ExtResource( 44 ), ExtResource( 53 ), ExtResource( 46 ), ExtResource( 30 ), ExtResource( 39 ), ExtResource( 25 ) ],
+"loop": false,
+"name": "Jump2",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 108 ), ExtResource( 92 ), ExtResource( 110 ), ExtResource( 98 ), ExtResource( 118 ), ExtResource( 109 ), ExtResource( 113 ), ExtResource( 116 ) ],
+"loop": false,
+"name": "JumpMelee",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 75 ), ExtResource( 91 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 106 ), ExtResource( 105 ), ExtResource( 70 ), ExtResource( 72 ), ExtResource( 80 ), ExtResource( 73 ) ],
+"loop": false,
+"name": "Slide",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 100 ), ExtResource( 114 ), ExtResource( 99 ), ExtResource( 111 ), ExtResource( 89 ) ],
+"loop": true,
+"name": "JumpShoot",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 77 ) ],
+"loop": false,
+"name": "Caida",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 12.0
+height = 29.0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 13, 26 )
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 25.0
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.27451, 0.666667, 0.27451, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 40
+font_data = ExtResource( 11 )
+
+[node name="Ppal" type="Node2D"]
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_vertical_guides_": [ -276.0 ]
+}
+Engrane = ExtResource( 7 )
+Zombie = ExtResource( 5 )
+Spit = ExtResource( 8 )
+Shoot = ExtResource( 6 )
+Bateria = ExtResource( 4 )
+
+[node name="CanvasFondo" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Fondo" type="Sprite" parent="CanvasFondo"]
+texture = ExtResource( 33 )
+centered = false
+
+[node name="ContenedorTiles" type="Node2D" parent="."]
+
+[node name="TileMapMundo" type="TileMap" parent="ContenedorTiles"]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+centered_textures = true
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -786404, 6, 0, -720868, 6, 0, -655333, 6, 0, -655329, 6, 0, -655328, 6, 0, -589797, 6, 0, -589793, 6, 0, -589792, 6, 0, -589791, 6, 0, -589790, 6, 0, -589789, 6, 0, -524261, 6, 0, -524257, 6, 0, -524253, 6, 0, -458725, 6, 0, -458721, 6, 0, -458717, 6, 0, -393216, 6, 0, -393215, 6, 0, -393214, 6, 0, -393213, 6, 0, -393212, 6, 0, -393211, 6, 0, -393210, 6, 0, -393189, 6, 0, -393185, 6, 0, -393181, 6, 0, -327653, 6, 0, -327649, 6, 0, -327645, 6, 0, -262144, 6, 0, -262121, 6, 0, -262117, 6, 0, -262113, 6, 0, -262109, 6, 0, -196608, 6, 0, -196590, 6, 0, -196589, 6, 0, -196588, 6, 0, -196587, 6, 0, -196586, 6, 0, -196585, 6, 0, -196581, 6, 0, -196577, 6, 0, -196573, 6, 0, -196572, 6, 0, -196571, 6, 0, -196570, 6, 0, -196569, 6, 0, -196568, 6, 0, -131072, 6, 0, -131041, 6, 0, -131032, 6, 0, -65536, 6, 0, -65532, 6, 0, -65529, 6, 0, -65528, 6, 0, -65505, 6, 0, -65496, 6, 0, -65425, 2, 0, 0, 6, 0, 4, 6, 0, 5, 6, 0, 6, 6, 0, 7, 6, 0, 14, 6, 0, 15, 6, 0, 16, 6, 0, 17, 6, 0, 31, 6, 0, 40, 6, 0, 109, 2, 0, 110, 2, 0, 65536, 6, 0, 65547, 6, 0, 65548, 6, 0, 65549, 6, 0, 65566, 6, 0, 65567, 6, 0, 65576, 6, 0, 65641, 2, 0, 65642, 2, 0, 65643, 2, 0, 65644, 2, 0, 131072, 6, 0, 131094, 6, 0, 131095, 6, 0, 131096, 6, 0, 131097, 6, 0, 131098, 6, 0, 131099, 6, 0, 131100, 6, 0, 131101, 6, 0, 131174, 2, 0, 131175, 2, 0, 131176, 2, 0, 196608, 6, 0, 196709, 2, 0, 196710, 2, 0, 262150, 6, 0, 262151, 6, 0, 262152, 6, 0, 262153, 6, 0, 262244, 2, 0, 327685, 6, 0, 327743, 6, 0, 327744, 6, 0, 327745, 6, 0, 327779, 2, 0, 327780, 2, 0, 393263, 6, 0, 393282, 6, 0, 393283, 6, 0, 393284, 6, 0, 393313, 2, 0, 393314, 2, 0, 393315, 2, 0, 458788, 6, 0, 458789, 6, 0, 458790, 6, 0, 458791, 6, 0, 458792, 6, 0, 458793, 6, 0, 458794, 6, 0, 458795, 6, 0, 458796, 6, 0, 458797, 6, 0, 458798, 6, 0, 458799, 6, 0, 458820, 6, 0, 458821, 6, 0, 458822, 6, 0, 458849, 2, 0, 524288, 0, 0, 524289, 1, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 2, 0, 524359, 6, 0, 524384, 2, 0, 589824, 3, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589829, 5, 0, 589878, 2, 0, 589879, 2, 0, 589880, 2, 0, 589881, 2, 0, 589882, 2, 0, 589895, 6, 0, 589920, 2, 0, 655360, 3, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 4, 0, 655365, 5, 0, 655375, 1, 0, 655388, 8, 0, 655414, 2, 0, 655432, 6, 0, 655455, 2, 0, 655456, 2, 0, 720896, 3, 0, 720897, 4, 0, 720898, 4, 0, 720899, 4, 0, 720900, 4, 0, 720901, 9, 0, 720902, 10, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 4, 0, 720950, 2, 0, 720968, 6, 0, 720990, 2, 0, 720991, 2, 0, 786432, 11, 0, 786433, 8, 0, 786434, 8, 0, 786435, 8, 0, 786436, 8, 0, 786437, 8, 0, 786438, 8, 0, 786439, 8, 0, 786440, 8, 0, 786441, 8, 0, 786442, 8, 0, 786443, 8, 0, 786444, 8, 0, 786445, 8, 0, 786446, 8, 0, 786447, 8, 0, 786448, 1, 0, 786449, 1, 0, 786462, 1, 0, 786463, 1, 0, 786487, 2, 0, 786494, 6, 0, 786495, 6, 0, 786496, 6, 0, 786497, 6, 0, 786498, 6, 0, 786504, 6, 0, 786525, 2, 0, 786526, 2, 0, 851986, 1, 0, 851987, 1, 0, 852013, 2, 0, 852014, 2, 0, 852015, 2, 0, 852016, 2, 0, 852017, 2, 0, 852018, 2, 0, 852019, 2, 0, 852020, 2, 0, 852021, 2, 0, 852022, 2, 0, 852023, 2, 0, 852030, 6, 0, 852059, 2, 0, 852060, 2, 0, 917524, 1, 0, 917525, 1, 0, 917550, 2, 0, 917565, 6, 0, 917566, 6, 0, 917594, 2, 0, 917595, 2, 0, 983062, 1, 0, 983063, 1, 0, 983086, 2, 0, 983101, 6, 0, 983129, 2, 0, 983130, 2, 0, 1048600, 1, 0, 1048601, 1, 0, 1048622, 2, 0, 1048636, 6, 0, 1048663, 2, 0, 1048664, 2, 0, 1048665, 2, 0, 1114138, 1, 0, 1114139, 1, 0, 1114158, 2, 0, 1114171, 6, 0, 1114172, 6, 0, 1114176, 2, 0, 1114199, 2, 0, 1179676, 1, 0, 1179677, 1, 0, 1179678, 0, 0, 1179679, 0, 0, 1179680, 1, 0, 1179681, 1, 0, 1179682, 1, 0, 1179683, 1, 0, 1179684, 0, 0, 1179685, 0, 0, 1179686, 0, 0, 1179687, 0, 0, 1179688, 0, 0, 1179689, 0, 0, 1179690, 0, 0, 1179691, 2, 0, 1179692, 2, 0, 1179693, 2, 0, 1179694, 2, 0, 1179695, 2, 0, 1179696, 2, 0, 1179697, 2, 0, 1179698, 2, 0, 1179699, 2, 0, 1179700, 2, 0, 1179701, 2, 0, 1179702, 2, 0, 1179703, 2, 0, 1179704, 2, 0, 1179705, 2, 0, 1179706, 2, 0, 1179707, 2, 0, 1179708, 2, 0, 1179709, 2, 0, 1179710, 2, 0, 1179711, 6, 0, 1179712, 6, 0, 1179713, 6, 0, 1179714, 6, 0, 1179715, 6, 0, 1179716, 6, 0, 1179717, 6, 0, 1179718, 6, 0, 1179719, 6, 0, 1179720, 2, 0, 1179721, 2, 0, 1179722, 2, 0, 1179723, 2, 0, 1179724, 2, 0, 1179725, 2, 0, 1179726, 2, 0, 1179727, 2, 0, 1179728, 2, 0, 1179729, 2, 0, 1179730, 2, 0, 1179731, 2, 0, 1179732, 2, 0, 1179733, 2, 0, 1179734, 2, 0, 1179735, 2, 0, 1179736, 2, 0, 1179737, 2, 0, 1179738, 2, 0, 1179739, 2, 0 )
+
+[node name="TileMapColeccionables" type="TileMap" parent="ContenedorTiles"]
+tile_set = ExtResource( 66 )
+cell_size = Vector2( 32, 32 )
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( -720862, 0, 0, -524285, 1, 0, -458751, 0, 0, -327660, 0, 0, -327642, 0, 0, -262143, 0, 0, -196601, 0, 0, -196499, 1, 0, -131067, 0, 0, -131058, 0, 0, -130970, 0, 0, 13, 0, 0, 26, 1, 0, 101, 0, 0, 65559, 0, 0, 65562, 0, 0, 131080, 0, 0, 196615, 0, 0, 196656, 0, 0, 196657, 0, 0, 196658, 0, 0, 262148, 0, 0, 262194, 0, 0, 262195, 0, 0, 327732, 0, 0, 327733, 0, 0, 327777, 0, 0, 327778, 0, 0, 393269, 0, 0, 393270, 0, 0, 458756, 1, 0, 458806, 0, 0, 458807, 0, 0, 458843, 0, 0, 458844, 0, 0, 458845, 0, 0, 458846, 0, 0, 458847, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655425, 0, 0, 655426, 0, 0, 655427, 0, 0, 655428, 0, 0, 655429, 0, 0, 720926, 0, 0, 720965, 0, 0, 720986, 0, 0, 786501, 0, 0, 786522, 0, 0, 852037, 0, 0, 852058, 0, 0, 917574, 0, 0, 917575, 0, 0, 917591, 0, 0, 983111, 0, 0, 1048625, 0, 0, 1048630, 0, 0, 1048641, 1, 0, 1114154, 1, 0, 1114160, 0, 0 )
+
+[node name="TileMapEnemigos" type="TileMap" parent="ContenedorTiles"]
+tile_set = ExtResource( 65 )
+cell_size = Vector2( 32, 32 )
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( -524283, 0, 0, -131060, 0, 0, 28, 0, 0, 196672, 0, 0, 327720, 0, 0, 720946, 0, 0 )
+
+[node name="TileMapLava" type="TileMap" parent="ContenedorTiles" groups=["Lava"]]
+tile_set = ExtResource( 67 )
+cell_size = Vector2( 32, 32 )
+cell_tile_origin = 1
+centered_textures = true
+collision_layer = 64
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 1310700, 0, 0, 1310701, 0, 0, 1310702, 0, 0, 1310703, 0, 0, 1310704, 0, 0, 1310705, 0, 0, 1310706, 0, 0, 1310707, 0, 0, 1310708, 0, 0, 1310709, 0, 0, 1310710, 0, 0, 1310711, 0, 0, 1310712, 0, 0, 1310713, 0, 0, 1310714, 0, 0, 1310715, 0, 0, 1310716, 0, 0, 1310717, 0, 0, 1310718, 0, 0, 1310719, 0, 0 )
+
+[node name="Esqueleto" parent="ContenedorTiles" instance=ExtResource( 160 )]
+position = Vector2( 1047, 517 )
+
+[node name="ContenedorColeccionables" type="Node2D" parent="."]
+
+[node name="ContenedorEnemigos" type="Node2D" parent="."]
+
+[node name="ContenedorSpits" type="Node2D" parent="."]
+
+[node name="ContenedorShoots" type="Node2D" parent="."]
+
+[node name="Portal" type="Area2D" parent="." groups=["Portal"]]
+position = Vector2( 495, 220 )
+collision_layer = 128
+collision_mask = 0
+
+[node name="AnimatedPortal" type="AnimatedSprite" parent="Portal"]
+frames = SubResource( 8 )
+animation = "Idle"
+frame = 5
+playing = true
+
+[node name="HitboxPortal" type="CollisionShape2D" parent="Portal"]
+shape = SubResource( 9 )
+
+[node name="PortalEntrada" type="Area2D" parent="."]
+collision_layer = 128
+collision_mask = 0
+
+[node name="AnimatedPortal" type="AnimatedSprite" parent="PortalEntrada"]
+frames = SubResource( 8 )
+animation = "Idle"
+frame = 6
+playing = true
+
+[node name="HitboxPortal" type="CollisionShape2D" parent="PortalEntrada"]
+shape = SubResource( 9 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 100, 220 )
+collision_layer = 4
+collision_mask = 65
+script = ExtResource( 9 )
+
+[node name="AnimatedPlayer" type="AnimatedSprite" parent="Player"]
+frames = SubResource( 1 )
+animation = "Idle"
+frame = 1
+playing = true
+
+[node name="RayCastTecho" type="RayCast2D" parent="Player/AnimatedPlayer"]
+position = Vector2( -30, 10 )
+enabled = true
+cast_to = Vector2( 0, -15 )
+
+[node name="RayCastPared" type="RayCast2D" parent="Player/AnimatedPlayer"]
+position = Vector2( 0, -5 )
+enabled = true
+cast_to = Vector2( 15, 0 )
+
+[node name="HitboxPlayer" type="CollisionShape2D" parent="Player"]
+position = Vector2( -2, 1 )
+shape = SubResource( 2 )
+
+[node name="HitboxSlide" type="CollisionShape2D" parent="Player"]
+position = Vector2( -5, 16 )
+rotation = 1.5708
+shape = SubResource( 2 )
+disabled = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+limit_left = -640
+limit_bottom = 640
+smoothing_enabled = true
+
+[node name="DetectorColisiones" type="Area2D" parent="Player"]
+collision_layer = 0
+collision_mask = 216
+
+[node name="HitboxDetector" type="CollisionShape2D" parent="Player/DetectorColisiones"]
+position = Vector2( -2, 2 )
+shape = SubResource( 3 )
+
+[node name="TimerTocado" type="Timer" parent="Player"]
+wait_time = 0.3
+one_shot = true
+
+[node name="Melee" type="Area2D" parent="Player" groups=["Melee"]]
+collision_layer = 32
+collision_mask = 0
+
+[node name="HitboxMelee" type="CollisionShape2D" parent="Player/Melee"]
+position = Vector2( 21, 1 )
+scale = Vector2( 0.5, 1 )
+shape = SubResource( 6 )
+disabled = true
+
+[node name="Tween" type="Tween" parent="Player"]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="BarraVida" type="ProgressBar" parent="HUD"]
+margin_left = 40.0
+margin_top = 550.0
+margin_right = 220.0
+margin_bottom = 564.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+value = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulos" type="Label" parent="HUD"]
+anchor_right = 1.0
+margin_bottom = 50.0
+custom_colors/font_color = Color( 0.117647, 0.117647, 0.901961, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Puntos          Player         Nivel"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Puntos" type="Label" parent="HUD"]
+anchor_right = 1.0
+margin_left = 310.0
+margin_top = 37.0
+margin_right = -698.0
+margin_bottom = 87.0
+custom_colors/font_color = Color( 0.117647, 0.117647, 0.901961, 1 )
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nivel" type="Label" parent="HUD"]
+anchor_right = 1.0
+margin_left = 721.0
+margin_top = 43.0
+margin_right = -287.0
+margin_bottom = 93.0
+custom_colors/font_color = Color( 0.117647, 0.117647, 0.901961, 1 )
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" type="Label" parent="HUD"]
+anchor_right = 1.0
+margin_left = 528.0
+margin_top = 39.0
+margin_right = -480.0
+margin_bottom = 89.0
+custom_colors/font_color = Color( 0.117647, 0.117647, 0.901961, 1 )
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="colectado" from="Player" to="." method="_on_Player_colectado"]
+[connection signal="disparado" from="Player" to="." method="_on_Player_disparado"]
+[connection signal="lavado" from="Player" to="." method="_on_Player_lavado"]
+[connection signal="nivelado" from="Player" to="." method="_on_Player_nivelado"]
+[connection signal="tocado" from="Player" to="." method="_on_Player_tocado"]
+[connection signal="area_entered" from="Player/DetectorColisiones" to="Player" method="_on_DetectorColisiones_area_entered"]
+[connection signal="body_entered" from="Player/DetectorColisiones" to="Player" method="_on_DetectorColisiones_body_entered"]
+[connection signal="timeout" from="Player/TimerTocado" to="Player" method="_on_TimerTocado_timeout"]
